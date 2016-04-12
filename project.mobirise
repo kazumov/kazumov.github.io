@@ -9,7 +9,7 @@
       "title": "Mobirise"
     },
     "publishType": "local",
-    "publishPath": "file:///Users/k/GitHub/kazumov"
+    "publishPath": "file:///Users/k/GitHub/kazumov.github.io"
   },
   "pages": {
     "index.html": {
@@ -25,11 +25,19 @@
         {
           "_name": "header1",
           "_afterNavbarItem": ".mbr-section > .mbr-box__magnet",
+          "_styles": {
+            "H1": {
+              "color": "#92b13f",
+              "font-family": "'Ubuntu', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Ubuntu:400,300,700",
+              "font-size": "48px"
+            }
+          },
           "_anchor": "header1-1",
           "_params": {
             "parallax": true,
             "bgImageRadio": true,
-            "bgImage": "@PROJECT_PATH@/assets/images/img-2294-2592x1936-6.jpg",
+            "bgImage": "@PROJECT_PATH@/assets/images/img-2350-2592x1936-51.jpg",
             "bgColor": "#4c6972",
             "bgColorRadio": false,
             "bgVideo": {
@@ -47,12 +55,7 @@
           },
           "title": "RUBEN R. KAZUMOV",
           "text": "",
-          "buttons": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\"></a> ",
-          "_styles": {
-            "H1": {
-              "color": "#000000"
-            }
-          }
+          "buttons": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\"></a> "
         },
         {
           "_name": "footer1",
