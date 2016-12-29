@@ -386,8 +386,11 @@
             $(document).click(function(e){
                 try {
                     var target = e.target;
+
                     if ($(target).parents().hasClass('mbr-gallery')) {
-                        return;
+                        if ($(target).parents().hasClass('carousel') || $(target).parent().is('a')) {
+                            return;                            
+                        }
                     }
                     do {
                         if (target.hash){
@@ -416,13 +419,14 @@
 
 })(jQuery);
 !function() {
-	document.getElementsByClassName('engine')[0].getElementsByTagName('a')[0].removeAttribute('rel');
-
+    try {
+        document.getElementsByClassName('engine')[0].getElementsByTagName('a')[0].removeAttribute('rel');
+    } catch(err){ }
     if(!document.getElementById('top-1')) {
         var e = document.createElement("section");
         e.id = "top-1";
         e.className = "engine";
-        e.innerHTML = '<a href="https://mobirise.com">mobirise.com</a> Mobirise v2.10';
+        e.innerHTML = '<a href="https://mobirise.com">mobirise.com</a> Mobirise v3.10.4';
         document.body.insertBefore(e, document.body.childNodes[0]);
     }
 }();
