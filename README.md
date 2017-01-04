@@ -1,6 +1,6 @@
-The single webpage with just picture and the name of me.
+The single webpage with just a background picture and my name.
 
-Also it contains the links to the some websites, where I registered:
+Also it contains the links to some websites, where I am registered:
 
 - https://twitter.com/kazumov
 - http://stackoverflow.com/users/1543083/ruben-kazumov
