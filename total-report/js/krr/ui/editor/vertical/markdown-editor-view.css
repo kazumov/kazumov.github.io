@@ -1,0 +1,32 @@
+div.mde {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mde .tb{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    height: 48px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mde .tb .editor {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 48px;
+    width: 100%;
+    height: calc(100% - 48px);
+    margin: 0px;
+    padding: 0px;
+}
+

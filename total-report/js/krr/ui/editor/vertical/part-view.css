@@ -1,0 +1,54 @@
+.sep{
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: rgb(60,60,60);
+    margin: 0px;
+    padding: 0px;
+}
+
+.sep .prev, .sep .nav, .sep .next {
+    top: 0px;
+    display: block;
+    position:absolute;
+    height: 48px;
+    font-size: large;
+    font-family: Verdana;
+    color: rgba(255,255,255,0.2);
+    text-align: center;
+    line-height: 48px;
+}
+
+.sep .prev, .sep .next {
+    width: 48px;
+    display: block;
+    position: absolute;
+}
+
+.sep .prev {
+    left: 0px;
+}
+
+.sep .nav {
+    left: 48px;
+    width: calc(100% - 2 * 48px);
+}
+
+.sep .next {
+    right: 0px;
+}
+
+.sep .container{
+    left: 0px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 48px;
+    height: calc(100% - 48px);
+}
+
+

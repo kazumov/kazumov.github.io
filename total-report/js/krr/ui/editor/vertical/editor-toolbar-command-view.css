@@ -1,0 +1,17 @@
+.command {
+    float: left;
+    margin-right: 1px;
+}
+
+.command .caption {
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    font-family: Verdana;
+    font-size: medium;
+    color: whitesmoke;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(80,80,80);
+}

@@ -1,0 +1,241 @@
+.parked-control-panel {
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.parked-control-panel .title-bar{
+    position: absolute;
+    display: block;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 15pt;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    background-color: rgba(1,1,1,0.3);
+}
+.parked-control-panel .title-bar .title{
+    position: absolute;
+    display: block;
+    font-family: Helvetica;
+    font-size: 10pt;
+    width: calc(100% - 15pt - 15pt);
+    left: 15pt;
+    padding-top: 2pt;
+    padding-left: 1em;
+    cursor: default;
+    color: rgba(255,255,255,1);
+}
+.parked-control-panel .content-area{
+    display: block;
+    position: absolute;
+    overflow: scroll;
+    top: 0px;
+    height: calc(100%);
+    width: calc(100% - 2px - 15pt);
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    background: none;
+    user-select: none;
+    background-color: rgb(60,60,60);
+}
+
+.parked-control-panel:after{
+    content: "";
+    display: block;
+    overflow: hidden;
+    top: 0px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-shadow: -1px 3px 53px 7px rgba(0,0,0,0.55);
+    -moz-box-shadow: -1px 3px 53px 7px rgba(0,0,0,0.55);
+    box-shadow: -1px 3px 53px 7px rgba(0,0,0,0.55);
+    user-select: none;
+}
+
+.parked-control-panel  .resize{
+    position: absolute;
+    display: block;
+    margin: 0px;
+    padding: 2pt;
+    width: 15pt;
+    height: 15pt;
+    right: 0px;
+    top: calc((100% / 2) - (15pt / 2));
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-align: right;
+    cursor: ew-resize;
+    user-select: none;
+}
+
+.parked-control-panel  .resize:hover{
+    color: rgba(0,0,0,1);
+}
+
+
+.browser-content .search {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    padding: 8pt;
+}
+.browser-content .search .spy-glass{
+    display: inline-block;
+    width: 16pt;
+    height: 16pt;
+    color: whitesmoke;
+    font-size: x-large;
+    text-align: center;
+    transform: translate(50%, 15%) rotate(45deg);
+    margin-right: 10pt;
+}
+.browser-content .search .text-input{
+    width: calc(100% - 50pt);
+    font-size: large;
+}
+
+
+
+
+.browser-content .group {}
+
+.browser-content .group .header{
+    display: inline-block;
+    width: 100%;
+    overflow:hidden;
+    margin: 0px;
+    background-color: rgb(60,60,60);
+    padding: 6pt;
+    white-space: nowrap;
+}
+
+.browser-content .group .header .title{
+    display: inline-block;
+    width: calc(100% - 26pt);
+    /*margin-left: 1em;*/
+    font-family: Helvetica, sans-serif;
+    padding: 4pt;
+    font-size: larger;
+    color: whitesmoke;
+    border-bottom: solid 1pt rgba(255,255,255,0.3);
+    user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.browser-content .group .header .triangle{
+    display: inline-block;
+    width: 16pt;
+    height: 16pt;
+    margin-bottom: 12pt;
+    /*top: 0px;*/
+    font-size: small;
+    color: whitesmoke;
+    user-select: none;
+    transition-duration: 0.5s;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.expanded {
+    transform: translate(0, 0) rotate(0deg);
+}
+.collapsed {
+    transform: translate(0, -25%) rotate(-90deg);
+}
+
+.browser-content .content{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+    /*display: none;*/
+}
+
+.list-sources {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.source-in-list-container {
+    /*font-family: "Andale Mono", AndaleMono, monospace;*/
+        font-family: Verdana;
+
+    background-color: rgb(60,60,60);
+    /*border: solid 1px lightcoral;*/
+    color: gainsboro;
+    padding-top: 6pt;
+    padding-bottom: 6pt;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.source-selected {
+    background-color: rgb(80,80,80);
+}
+
+.source-in-list-container .bar{
+    display: inline-block;
+    width: 100%;
+}
+
+.source-in-list-container .bar .caption{
+    display: inline-block;
+    width: calc(100% - 40pt);
+    font-size: small;
+/*     font-size:larger; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.source-in-list-container .bar .drawer{
+    display: inline-block;
+    /*font-size:larger;*/
+    width: 30pt;
+    text-align: center;
+    vertical-align: top;
+}
+
+.source-in-list-container .bar .drawer:hover{
+    background-color: rgb(90,90,90);
+}
+
+
+.source-in-list-container .description{
+    width: 100%;
+    overflow: hidden;
+    font-size: smaller;
+    text-overflow: ellipsis;
+}
+
+.source-in-list-container .subdescription{
+/*    font-family: monospace;*/
+    /*font-size:small;*/
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    font-size: x-small;
+}
+
+span.parameter-name{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    padding-right: 1em;
+}
+span.parameter-value{}
+
+
+

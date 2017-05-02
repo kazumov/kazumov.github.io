@@ -1,0 +1,10 @@
+.ea {
+    /*background-color: black;*/
+    background-image: url("../../grey-abstract-wallpaper-002.jpg");
+    padding:0px;
+    position: absolute;
+    display:block;
+    overflow: auto;
+    min-width: 400px;
+    opacity : 0.2;
+}

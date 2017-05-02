@@ -1,0 +1,140 @@
+ul.list-sources {
+    display: block;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(60,60,60);
+}
+
+ul.list-sources li {
+    font-family: Verdana;
+    font-size: small;
+    color: gainsboro;
+    padding-top: 6pt;
+    padding-bottom: 6pt;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+ul.list-sources li div.properties-visible, ul.list-sources li div.menu-icon, ul.list-sources li div.menu-visible {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+ul.list-sources li div.properties-visible {
+    width: calc(100% - 2 * 16pt);
+    /*display: block;*/
+}
+
+ul.list-sources li div.properties-invisible {
+    display: none;
+    width: 0px;
+}
+
+
+ul.list-sources li div.menu-icon {
+    width: 26pt;
+    height: 16pt;
+    text-align: center;
+}
+
+ul.list-sources li div.menu-icon:hover {
+    background-color: rgb(80,80,80);
+}
+
+ul.list-sources li div.menu-invisible {
+    display: none;
+    width: 0px;
+}
+
+ul.list-sources li div.menu-visible {
+    width: calc(100% - 2 * 16pt);
+}
+
+
+.properties-visible .caption{
+    padding-left: 1em;
+    font-size: medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.properties-visible .description{
+    padding-left: 2em;
+    overflow: hidden;
+    font-size: small;
+    text-overflow: ellipsis;
+}
+
+.properties-visible * a{
+    color: lightskyblue;
+}
+
+.properties-visible .subdescription{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 3em;
+    padding-top: 0.5em;
+    font-size: small;
+}
+
+
+span.parameter-name{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    padding-right: 1em;
+}
+span.parameter-value{}
+
+
+.menu-visible {
+    font-size: small;
+    font-family: Verdana;
+    color: gainsboro;
+    display: block;
+    white-space: nowrap;
+    padding: 0.5em;
+    margin: 0px;
+    left: 300px;
+    width: 100px;
+    overflow: scroll;
+}
+.menu-visible .caption{
+    padding-left: 1em;
+    font-size: medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.menu-visible ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.menu-visible ul li {
+}
+.menu-visible ul li span {
+    font-size: small;
+    display: inline-block;
+    user-selemt: none;
+    cursor: default;
+    color: #9a9a9a;
+}
+.menu-visible ul li a {
+    display: inline-block;
+    cursor: default;
+    user-selemt: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.menu-visible ul li a:hover {
+    background-color: rgb(80,80,80);
+}

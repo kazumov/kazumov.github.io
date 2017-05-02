@@ -1,0 +1,159 @@
+.control-panel {
+    /*font-family: monospace;*/
+    position: absolute;
+    display: block;
+    border: 1px solid rgba(1,1,1,0.3);
+    background-color: rgba(255,255,255,0.7);
+    top: 100px;
+    left: 400px;
+    width: 500px;
+    height: 600px;
+    margin: -2px;
+    padding: 0px;
+}
+
+/*.control-panel:after{
+    content: "";
+    display: block;
+    overflow: hidden;
+    top: 0px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-shadow: -5px 5px 5px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: -5px 5px 5px 5px rgba(0,0,0,0.2);
+    box-shadow: -5px 5px 5px 5px rgba(0,0,0,0.2);
+    user-select: none;
+}*/
+
+.control-panel .header {
+    position: absolute;
+    display: block;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 15pt;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    /*background-color: rgba(1,1,1,0.3);*/
+}
+
+.control-panel .header .drawer {
+    position: absolute;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 15pt;
+    left: 0px;
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-align: center;
+    padding-right: 2pt;
+    user-select: none;
+    cursor: default;
+}
+
+.control-panel .header .drawer:hover {
+    color: rgba(0,0,0,1);
+}
+
+.control-panel .header .title {
+    position: absolute;
+    display: block;
+    font-family: Helvetica;
+    font-size: 10pt;
+    width: calc(100% - 15pt - 15pt);
+    left: 15pt;
+    padding-top: 2pt;
+    padding-left: 1em;
+    cursor: default;
+    /*color: black;*/
+    color: rgba(0,0,0,0.3);
+    /*color: rgba(255,255,255,1);*/
+}
+
+.control-panel .header .title:hover {
+    color: rgba(0,0,0,1);
+}
+
+.control-panel .header .close {
+    position: absolute;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 15pt;
+    right: 0px;
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-align: right;
+    padding-right: 2pt;
+    user-select: none;
+    cursor: default;
+}
+
+.control-panel .header .close:hover {
+    color: rgba(0,0,0,1);
+}
+
+.control-panel .content-area {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: calc(15pt);
+    height: calc(100% - 15pt - 15pt);
+    width: calc(100% - 2px);
+    margin: 0px;
+    padding: 0px;
+    left: 1px;
+    background: none;
+    user-select: none;
+}
+.control-panel .resize-left {
+    position: absolute;
+    display: block;
+    margin: 0px;
+    padding: 2pt;
+    width: 15pt;
+    height: 15pt;
+    left: 0px;
+    bottom: 0px;
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-align: left;
+    cursor: nesw-resize;
+    user-select: none;
+    /*background-color: rgba(1,1,1,0.1);*/
+}
+
+.control-panel .resize-left:hover {
+    color: rgba(1,1,1,1);
+}
+
+.control-panel .resize-right {
+    position: absolute;
+    display: block;
+    margin: 0px;
+    padding: 2pt;
+    width: 15pt;
+    height: 15pt;
+    right: 0px;
+    bottom: 0px;
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-align: right;
+    cursor: nwse-resize;
+    user-select: none;
+}
+
+.control-panel .resize-right:hover {
+    color: rgba(1,1,1,1);
+}
+
+
+.control-panel .content-area .preview-area {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    padding: 1em;
+}

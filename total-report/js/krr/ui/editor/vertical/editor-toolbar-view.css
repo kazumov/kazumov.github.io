@@ -1,0 +1,65 @@
+.tb{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    height: 48px;
+    margin: 0px;
+    padding: 0px;
+}
+.tb:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 1px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.tb .cmd-slide-l, .tb .cmd-slide-r {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    overflow: hidden;
+    color: rgba(255,255,255,0.2);
+    text-align: center;
+    font-size: large;
+}
+.tb .cmd-slide-l{
+    left: 0px;
+}
+.tb .cmd-slide-r{
+    right: 0px;
+}
+.tb .window {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    width: calc(100% - 2 * 48px);
+    left: 48px;
+    height: 48px;
+    overflow: hidden;
+}
+.tb .window .slider{
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    height: 48px;
+    margin: 0px;
+    padding: 0px;
+}

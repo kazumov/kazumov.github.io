@@ -1,0 +1,74 @@
+.bp {
+    font-family: Verdana;
+    font-size: small;
+    display: block;
+    position: absolute;
+    background-color: rgb(60,60,60);
+    right: 0px;
+    bottom: 0px;
+    width: 600px;
+    height: 100px;
+    overflow: hidden;
+    color: whitesmoke;
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+    cursor: default;
+}
+
+.bp:before{
+    content: "";
+    display: block;
+    position:absolute;
+    width: 100%;
+    background-color: whitesmoke;
+    height: 1px;
+    top: 0;
+    left: 0px;
+}
+
+.bp .close {
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 1px;
+    font-size: medium;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    background-color: rgb(60,60,60);
+    color: rgba(255,255,255,0.2);
+    /*transform: rotate(-90deg);*/
+}
+
+/*
+.bp .close:hover {
+    background-color: rgb(80,80,80);
+}
+*/
+
+.bp .content-area {
+    display: block;
+    position: absolute;
+    left: 1em;
+    width: calc(100% - 24pt);
+    top: 24pt;
+    height: calc(100% - 30pt);
+    overflow: hidden;
+}
+
+.bp .navigator {
+    display: block;
+    position: absolute;
+    left: 1em;
+    top: 0.5em;
+    font-size: large;
+    color: rgba(255,255,255,0.2);
+    /*transform: rotate(-90deg);*/
+    /*transform-origin: 0 0;*/
+    white-space:nowrap;
+    width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}

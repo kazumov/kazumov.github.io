@@ -1,0 +1,81 @@
+.dsp {
+    font-family: Verdana;
+    font-size: small;
+    display: block;
+    position: absolute;
+    background-color: rgb(60,60,60);
+    left: 0px;
+    top: 0px;
+    width: 400px;
+    height: 100%;
+    overflow: hidden;
+    color: whitesmoke;
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+    cursor: default;
+}
+
+.dsp:before{
+    content: "";
+    display: block;
+    position:absolute;
+    width: 1px;
+    background-color: whitesmoke;
+    height: 100%;
+    right: 0;
+}
+
+.dsp .caption {
+    display: block;
+    position: absolute;
+    left: 1em;
+    top: 0.5em;
+    width: calc(100% - 3em - 3em);
+    font-size: medium;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dsp .close {
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    right: 1px;
+    font-size: medium;
+    width: 48px;
+    text-align: center;
+    background-color: rgb(60,60,60);
+    color: rgba(255,255,255,0.2);
+}
+
+.dsp .close:hover {
+    /*background-color: rgb(80,80,80);*/
+}
+
+.dsp .content-area {
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: calc(100% - 1px);
+    bottom: 0px;
+    height: calc(100% - 48px);
+    overflow: auto;
+}
+
+.dsp .navigator {
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: calc(100% -  1em);
+    font-size: large;
+    color: rgba(255,255,255,0.2);
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    white-space:nowrap;
+    width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}

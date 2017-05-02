@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="http://r.local/nb/interactive-contract/public_html/favicon.png"/>
+        <script src="js/krr.js" type="text/javascript"></script>
+        <script src="js/krr/ui.js" type="text/javascript"></script>
+        <script src="js/krr/ui/fx.js" type="text/javascript"></script>
+        <script src="js/krr/ui/fx/animations.js" type="text/javascript"></script>
+        <script src="js/krr/ui/list-item-view.js" type="text/javascript"></script>
+        <link href="css/ui/list-item-view.css" rel="stylesheet" type="text/css"/>
+        <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            window.onload = function () {
+                document.ontouchmove = function (e) {
+//                    var target = e.currentTarget;
+//                    while (target) {
+//                        if (checkIfElementShouldScroll(target))
+//                            return;
+//                        target = target.parentNode;
+//                    }
+
+                    e.preventDefault();
+                };
+                var container = document.createElement("div");
+                container.setAttribute("class", "test-container");
+                var log = document.createElement("textarea");
+                log.setAttribute("class", "log");
+                var list = document.createElement("ul");
+                list.setAttribute("class", "list-sources");
+                list.style.display = "block";
+                list.style.position = "absolute";
+                list.style.width = "300px";
+                var captions = [
+                    "Alcohol/Substance Abuse",
+                    "Alcohol/Substance Dependence",
+                    "Anxiety Disorders",
+                    "Adult Attention Deficit/Hyperactivity Disorder (ADHD/ADD)",
+                    "Bipolar Disorder",
+                    "Depression",
+                    "Eating Disorders",
+                    "Generalized Anxiety Disorder"
+                ];
+
+                document.body.appendChild(container);
+                container.appendChild(list);
+                document.body.appendChild(log);
+
+
+                for (var i = 0; i < captions.length; i++) {
+                    var item = new krr.ui.ListItemView();
+                    item.setCaption(captions[i]);
+                    list.appendChild(item.element);
+                    item.onlog = (message) => {
+                        log.value = message + "\n" + log.value;
+                    };
+                }
+                
+                var add = document.createElement("div");
+                add.setAttribute("class", "add");
+                add.innerHTML = "Add";
+                container.appendChild(add);
+//                var m = new krr.TotalReport.MenuSourceAsListItem({});
+//                document.body.appendChild(m.element);
+            };
+        </script>
+    </body>
+</html>
