@@ -30,22 +30,63 @@ and open the template in the editor.
     <body>
         <script>
             window.onload = function () {
-                var d = document.createElement("textarea");
-                document.body.appendChild(d);
+                var textIcons = document.createElement("textarea");
+                var textCaptions = document.createElement("textarea");
+                var textNothing = document.createElement("textarea");
+                document.body.appendChild(textIcons);
+                document.body.appendChild(textCaptions);
+                document.body.appendChild(textNothing);
+
+                var tbContainer = document.createElement("div");
+                tbContainer.setAttribute("class", "test-container");
+                document.body.appendChild(tbContainer);
+
+
+                var tbIcons = new krr.ui.ToolbarView();
+                var icons = ["undo", "table", "clone", "calendar", "heart-o", 
+                    "cube", "podcast", "telegram", "snowflake-o", "anchor", 
+                    "bar-chart", "bug", "cubes", "diamond", "file-pdf-o"];
+                icons.forEach((icon) => {
+                    tbIcons.addCommand({type: "icon", icon: icon, callback: (e) => {
+                            textIcons.value = icon;
+                        }
+                    });
+                });
+
+                var tbCaptions = new krr.ui.ToolbarView();
+                var captions = ["A", "B", "C", "K", "ABC", "123.45", "$123.45", "MM/DD/YYYY", "Table"];
+                captions.forEach((caption) => {
+                    tbCaptions.addCommand({type: "text", caption: caption, callback: (e) => {
+                            textCaptions.value = caption;
+                        }
+                    });
+                });
+                
                 document.ontouchmove = function (e) {
-                    d.value = (e.targetTouches[0].target === document.body);
                     if (e.targetTouches[0].target === document.body) {
                         e.preventDefault();
+                    } else {
+                        e.stopPropagation();
                     }
                 };
-                var container = document.createElement("div");
-                container.setAttribute("class", "test-container");
-                document.body.appendChild(container);
 
 
-                var tb = new krr.ui.ToolbarView();
-                container.appendChild(tb.element);
+                textIcons.addEventListener("click", () => {
+                    tbContainer.innerHTML = "";
+                    tbContainer.appendChild(tbIcons.element);
+                });
 
+                textCaptions.addEventListener("click", () => {
+                    tbContainer.innerHTML = "";
+                    tbContainer.appendChild(tbCaptions.element);
+                });
+                
+                textNothing.addEventListener("click", () => {
+                    tbContainer.innerHTML = "<span>This area unfortunately hates any toolbars. No kidding!</span>";
+                });
+                
+                tbContainer.innerHTML = "";
+//                container.appendChild(tbCaptions.element);
             };
         </script>
     </body>
