@@ -21,9 +21,15 @@ and open the template in the editor.
         <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <style>
             html, body {
-                width: 100%;
                 height: 100%;
+                width: 100%;
+                position: fixed;
                 overflow: hidden;
+                background-color: pink;
+                padding: 0px;
+                margin: 0px;
+                top: 0px;
+                left: 0px;
             }
         </style>
     </head>
@@ -43,8 +49,8 @@ and open the template in the editor.
 
 
                 var tbIcons = new krr.ui.ToolbarView();
-                var icons = ["undo", "table", "clone", "calendar", "heart-o", 
-                    "cube", "podcast", "telegram", "snowflake-o", "anchor", 
+                var icons = ["undo", "table", "clone", "calendar", "heart-o",
+                    "cube", "podcast", "telegram", "snowflake-o", "anchor",
                     "bar-chart", "bug", "cubes", "diamond", "file-pdf-o"];
                 icons.forEach((icon) => {
                     tbIcons.addCommand({type: "icon", icon: icon, callback: (e) => {
@@ -52,10 +58,13 @@ and open the template in the editor.
                         }
                     });
                 });
+                tbIcons.element.addEventListener("touchmove", function (e) {
+                    e.stopPropagation();
+                }, false);
 
                 var tbCaptions = new krr.ui.ToolbarView();
-                var captions = ["A", "B", "C", "K", "ABC", "123.45", "$123.45", 
-                    "MM/DD/YYYY", "Table", "Long-long-long button", "X", "Y", 
+                var captions = ["A", "B", "C", "K", "ABC", "123.45", "$123.45",
+                    "MM/DD/YYYY", "Table", "Long-long-long button", "X", "Y",
                     "Z", "&#x2606;", "&#x2655;", "&#x270e;", "&#x21c4;", "&#x21e6;"];
                 captions.forEach((caption) => {
                     tbCaptions.addCommand({type: "text", caption: caption, callback: (e) => {
@@ -63,14 +72,13 @@ and open the template in the editor.
                         }
                     });
                 });
-                
-                document.ontouchmove = function (e) {
-                    if (e.targetTouches[0].target === document.body) {
-                        e.preventDefault();
-                    } else {
-                        e.stopPropagation();
-                    }
-                };
+                tbCaptions.element.addEventListener("touchmove", function (e) {
+                    e.stopPropagation();
+                }, false);
+
+                document.addEventListener("touchmove", function (e) {
+                    e.preventDefault();
+                }, false);
 
 
                 textIcons.addEventListener("click", () => {
@@ -82,11 +90,11 @@ and open the template in the editor.
                     tbContainer.innerHTML = "";
                     tbContainer.appendChild(tbCaptions.element);
                 });
-                
+
                 textNothing.addEventListener("click", () => {
                     tbContainer.innerHTML = "<span>This area unfortunately hates any toolbars. No kidding!</span>";
                 });
-                
+
                 tbContainer.innerHTML = "";
 //                container.appendChild(tbCaptions.element);
             };
